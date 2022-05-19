@@ -6,6 +6,7 @@
 ### Augmented Reality Personal Repository:  https://github.com/StellaPiperaki?tab=repositories
 
 # Introduction
+.
 
 Σε αυτό το έργο δημιουργώ τον πρώτο μου τοπικό φιλοξενούμενο ιστότοπο Επαυξημένης Πραγματικότητας χρησιμοποιώντας τις βιβλιοθήκες AR.js, A-frame και aframe ομιλίας και annyang.
 
