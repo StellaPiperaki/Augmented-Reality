@@ -16,13 +16,7 @@
     <script src="build/aframe-speech-command-component.js"></script> 
     
 
-    <body style="margin : 0px; overflow: hidden;">
-        <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-  >
+   
    <!--
           <a-snow
         snow="count:8000; dropRadius: 1.5; height:45; color: white;"
@@ -32,6 +26,13 @@
 <a-entity id="menu"
 speech-command__show="command:play snow; type: attribute; attribute: visible; value: true;"
 speech-command__show="command:stop snow; type: attribute; attribute: visible; value: false;">
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+embedded
+arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+>
 </a-entity>
         <a-marker preset="hiro">
          <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2; " position="0 0 0" material="color:red;"></a-entity>
