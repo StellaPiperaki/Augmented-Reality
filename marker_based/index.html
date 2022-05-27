@@ -46,16 +46,28 @@ arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
         <a-text color="#660066" value="StellaPiperaki" width="5" rotation="0 0 0" class="bolded" position=" -1 0 -1"></a-text>
     </a-marker>
 
+    <a-assets>
+        <a-asset-item id="hydrogen" src="/assets/hydrogen_molecule/scene.gltf"></a-asset-item>
+    </a-assets>
+
     <a-marker type="pattern" preset="custom" url="/assets/pattern-card-H.patt">
-        <a-entity gltf-model="/assets/hydrogen_molecule/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
+        <a-entity gltf-model="#hydrogen" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
     </a-marker>
+
+    <a-assets>
+        <a-asset-item id="oxygen" src="/assets/oxygen_molecule/scene.gltf"></a-asset-item>
+    </a-assets>
 
     <a-marker type="pattern" preset="custom" url="/assets/pattern-card-O.patt">
-        <a-entity gltf-model="/assets/oxygen_molecule/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
+        <a-entity gltf-model="#oxygen" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
     </a-marker>
 
+    <a-assets>
+        <a-asset-item id="h20" src="/assets/h2o_molecule/scene.gltf"></a-asset-item>
+    </a-assets>
+
     <a-marker type="pattern" preset="custom" url="/assets/pattern-card-water.patt">
-        <a-entity gltf-model="/assets/h2o_molecule/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
+        <a-entity gltf-model="#h20" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
     </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
