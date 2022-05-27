@@ -15,16 +15,7 @@
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script> -->
     <script src="build/aframe-speech-command-component.js"></script> 
     
-   <!--
-          <a-snow
-        snow="count:8000; dropRadius: 1.5; height:45; color: white;"
-        particle-system="preset: snow"
-        scale"111;"
-   </a-snow>  -->
-<a-entity id="menu" 
-speech-command__show="command:play snow; type: attribute; attribute: visible; value: true;"
-speech-command__show="command:stop snow; type: attribute; attribute: visible; value: false;">
-<body style="margin : 0px; overflow: hidden;">
+ 
     <a-scene
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
@@ -47,7 +38,7 @@ arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     </a-marker>
 
     <a-assets>
-        <a-asset-item id="hydrogen" src="/assets/hydrogen_molecule/scene.gltf"></a-asset-item>
+        <a-asset-item id="hydrogen" src="//assets/hydrogen_molecule/scene.gltf"></a-asset-item>
     </a-assets>
 
     <a-marker type="pattern" preset="custom" url="/assets/pattern-card-H.patt">
@@ -55,7 +46,7 @@ arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     </a-marker>
 
     <a-assets>
-        <a-asset-item id="oxygen" src="/assets/oxygen_molecule/scene.gltf"></a-asset-item>
+        <a-asset-item id="oxygen" src="//assets/oxygen_molecule/scene.gltf"></a-asset-item>
     </a-assets>
 
     <a-marker type="pattern" preset="custom" url="/assets/pattern-card-O.patt">
@@ -69,7 +60,19 @@ arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     <a-marker type="pattern" preset="custom" url="/assets/pattern-card-water.patt">
         <a-entity gltf-model="#h20" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
     </a-marker>
+
         <a-entity camera></a-entity>
+
+        <a-entity id="menu" 
+        speech-command__show="command:play snow; type: attribute; attribute: visible; value: true;"
+        speech-command__show="command:stop snow; type: attribute; attribute: visible; value: false;">
+        <body style="margin : 0px; overflow: hidden;">
+    <!--
+          <a-snow
+        snow="count:8000; dropRadius: 1.5; height:45; color: white;"
+        particle-system="preset: snow"
+        scale"111;"
+   </a-snow>  -->
         </a-scene>
     </body>
 </html>
