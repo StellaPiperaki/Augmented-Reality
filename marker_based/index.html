@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-  
-<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>-->
     <script src="build/aframe-ar.js"></script>
@@ -9,44 +8,63 @@
     <!-- particles system component -->
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
     
-    <!-- aframe extras -->
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-
     <!-- speech command component -->
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script> -->
-    <script src="build/aframe-speech-command-component.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+    <!--<script src="build/aframe-speech-command-component.js"></script> -->
 
- 
 
     <body style="margin : 0px; overflow: hidden;">
+
+
         <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-  >
-  <!--Deliverable 1-->
- <!--
-          <a-snow
-        snow="count:8000; dropRadius: 1.5; height:45; color: white;"
-        particle-system="preset: snow"
-        scale"111;"
-   </a-snow>  -->
-
-  
-  <a-entity id="menu"
-  speech-command__start="command: start; type: attribute; attribute: visible; targetElement: #snow; value: true;"
-  speech-command__stop="command: stop; type: attribute; attribute: visible;  targetElement: #snow; value: false ;">
-</a-entity>
-<a-marker preset="hiro">
-         <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2; " position="0 0 0" material="color:red;"></a-entity>
-        <a-entity id="sphere" geometry="primitive: sphere; radius: 0.2; " position="0.5 0 0" material="color: green;"></a-entity>
-        <a-entity id="cylinder" geometry="primitive: cylinder; radius: 0.2;  height: 0.2; " position="-0.5 0 0" material="color: blue;"></a-entity>
-       <a-entity position="0 2 -10" particle-system="preset:snow; particleCount:5000">  </a-entity>
-    </a-marker>
+            vr-mode-ui="enabled: false;"
+            renderer="logarithmicDepthBuffer: true;"
+            embedded
+            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
 
-     <a-entity camera></a-entity>
+            <a-marker id= "DPSD" preset="custom" type = "pattern" url="./assets/pattern-DPSD.patt">
+            <a-text value="Mitsiani-Anna" position="-0.5 0 -0.5" rotation="-90 0 0" color="black"></a-text>
+            <a-image src="./assets/stella.png" position="0 1.2 -1.8" rotation="-90 0 0"></a-image>
+            </a-marker>
+
+            <a-assets>
+                <a-asset-item id="Bottle_Cap" src="./assets/Bottle_Cap.gltf"></a-asset-item>
+            </a-assets>
+
+            <a-assets>
+                <a-asset-item id="Tai_Chi_Ball_" src="./assets/Tai_Chi_Ball_.gltf"></a-asset-item>
+            </a-assets>
+            
+
+            <a-marker id= "markerH" preset="custom2" type = 'pattern' url = './assets/pattern-card-H.patt'>
+            <a-text value="Hydrogen" position="-0.5 0 -0.5" rotation="-90 0 0" color="black"></a-text>
+            <a-entity position="0 0 -1.8" scale="0.05 0.05 0.05" gltf-model="#Bottle_Cap" animation="property: rotation; dur: 12000; to: 0 360 0; loop: true"></a-entity>
+            </a-marker>
+
+            <a-marker id= "markerO" preset="custom3" type = 'pattern' url = './assets/pattern-card-O.patt'>
+            <a-text value="Oxygen" positions="-0.5 0 -0.5" rotation="-90 0 0" color="black"></a-text>
+            <a-entity geometry="primitive: box; width:1; height:1; depth:1" position="0 0 -1.8" scale="0.01 0.01 0.01" gltf-model="#Tai_Chi_Ball_" 
+            animation="property: rotation; dur: 4000; to: 0 360 0; loop: true"></a-entity>
+            </a-marker>
+
+            
+                <!--
+                <a-entity id="menu"
+                    speech-command__show="command: play snow; type: attribute; attribute: visible; value: true;"
+                    speech-command__hide="command: stop snow; type: attribute; attribute: visible; value: false;">
+                </a-entity> -->
+    
+            
+                <a-marker preset="hiro">
+                    <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2; " position="0 0 0" material="color:red;"></a-entity>
+                   <a-entity id="sphere" geometry="primitive: sphere; radius: 0.2; " position="0.5 0 0" material="color: green;"></a-entity>
+                   <a-entity id="cylinder" geometry="primitive: cylinder; radius: 0.2;  height: 0.2; " position="-0.5 0 0" material="color: blue;"></a-entity>
+                  <a-entity position="0 2 -10" particle-system="preset:snow; particleCount:5000">  </a-entity>
+               </a-marker>                 
+
+        
+            <a-entity camera></a-entity>           
         </a-scene>
     </body>
 </html>
