@@ -22,6 +22,17 @@
     embedded
 arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
 >
+<!--
+  <a-snow
+snow="count:8000; dropRadius: 1.5; height:45; color: white;"
+particle-system="preset: snow"
+scale"111;"
+</a-snow>  -->
+
+<a-entity id="menu" 
+speech-command__show="command:play snow; type: attribute; attribute: visible; value: true;"
+speech-command__show="command:stop snow; type: attribute; attribute: visible; value: false;">
+</a-entity>
 
         <a-marker preset="hiro">
          <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2; " position="0 0 0" material="color:red;"></a-entity>
@@ -29,50 +40,11 @@ arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
         <a-entity id="cylinder" geometry="primitive: cylinder; radius: 0.2;  height: 0.2; " position="-0.5 0 0" material="color: blue;"></a-entity>
        <a-entity position="0 2 -10" particle-system="preset:snow; particleCount:5000">  </a-entity>
     </a-marker>
-    <a-marker  preset="DPSD19109" type="pattern" preset="custom" url="/assets/pattern-dpsdNEW.patt">
-        <a-assets>
-            <img id="santorini" src="/assets/santorini.png">
-        </a-assets>
-        <a-image width="1.5" height="1.5" src="#santorini" position="0 0 0" rotation="0 0 0"></a-image>
-        <a-text color="#660066" value="StellaPiperaki" width="5" rotation="0 0 0" class="bolded" position=" -1 0 -1"></a-text>
-    </a-marker>
 
-    <a-assets>
-        <a-asset-item id="hydrogen" src="//assets/hydrogen_molecule/scene.gltf"></a-asset-item>
-    </a-assets>
-
-    <a-marker type="pattern" preset="custom" url="/assets/pattern-card-H.patt">
-        <a-entity gltf-model="#hydrogen" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
-    </a-marker>
-
-    <a-assets>
-        <a-asset-item id="oxygen" src="//assets/oxygen_molecule/scene.gltf"></a-asset-item>
-    </a-assets>
-
-    <a-marker type="pattern" preset="custom" url="/assets/pattern-card-O.patt">
-        <a-entity gltf-model="#oxygen" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
-    </a-marker>
-
-    <a-assets>
-        <a-asset-item id="h20" src="/assets/h2o_molecule/scene.gltf"></a-asset-item>
-    </a-assets>
-
-    <a-marker type="pattern" preset="custom" url="/assets/pattern-card-water.patt">
-        <a-entity gltf-model="#h20" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
-    </a-marker>
 
         <a-entity camera></a-entity>
 
-        <a-entity id="menu" 
-        speech-command__show="command:play snow; type: attribute; attribute: visible; value: true;"
-        speech-command__show="command:stop snow; type: attribute; attribute: visible; value: false;">
-    </a-entity>
-    <!--
-          <a-snow
-        snow="count:8000; dropRadius: 1.5; height:45; color: white;"
-        particle-system="preset: snow"
-        scale"111;"
-   </a-snow>  -->
+     
         </a-scene>
     </body>
 </html>
