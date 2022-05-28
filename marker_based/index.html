@@ -33,15 +33,12 @@
         scale"111;"
    </a-snow>  -->
 
-  <a-marker preset="hiro">
-
-
-
+  
   <a-entity id="menu"
   speech-command__start="command: start; type: attribute; attribute: visible; targetElement: #snow; value: true;"
   speech-command__stop="command: stop; type: attribute; attribute: visible;  targetElement: #snow; value: false ;">
 </a-entity>
-
+<a-marker preset="hiro">
          <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2; " position="0 0 0" material="color:red;"></a-entity>
         <a-entity id="sphere" geometry="primitive: sphere; radius: 0.2; " position="0.5 0 0" material="color: green;"></a-entity>
         <a-entity id="cylinder" geometry="primitive: cylinder; radius: 0.2;  height: 0.2; " position="-0.5 0 0" material="color: blue;"></a-entity>
