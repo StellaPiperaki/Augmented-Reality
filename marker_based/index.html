@@ -26,11 +26,10 @@
 speech-command__show="command:play snow; type: attribute; attribute: visible; value: true;"
 speech-command__show="command:stop snow; type: attribute; attribute: visible; value: false;">
 <body style="margin : 0px; overflow: hidden;">
-    <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-embedded
-arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+    <a-scene vr-mode-ui="enabled: false;"
+     renderer="logarithmicDepthBuffer: true;" 
+     embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 >
 </a-entity>
         <a-marker preset="hiro">
