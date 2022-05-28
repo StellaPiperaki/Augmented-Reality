@@ -39,7 +39,8 @@ arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
         <a-entity id="cylinder" geometry="primitive: cylinder; radius: 0.2;  height: 0.2; " position="-0.5 0 0" material="color: blue;"></a-entity>
        <a-entity position="0 2 -10" particle-system="preset:snow; particleCount:5000">  </a-entity>
     </a-marker>
-    <a-marker type="pattern" preset="custom" url="/assets/pattern-dpsdNEW.patt">
+    
+    <a-marker preset="DPSD19109" type="pattern" preset="custom" url="./assets/pattern-DPSD.patt">
         <a-assets>
             <img id="stella" src="./assets/stella.png">
         </a-assets>
@@ -47,17 +48,33 @@ arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
         <a-text color="#660066" value="StellaPiperaki" width="5" rotation="0 0 0" class="bolded" position=" -1 0 -1"></a-text>
     </a-marker>
 
-    <a-marker type="pattern" preset="custom" url="/assets/pattern-card-H.patt">
-        <a-entity gltf-model="/assets/hydrogen_molecule/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
-    </a-marker>
+</a-marker>
+   
+<a-assets>
+ <a-asset-item id="hydrogen" src="./assets/hydrogen_molecule/scene.gltf"></a-asset-item>
+</a-assets>
 
-    <a-marker type="pattern" preset="custom" url="/assets/pattern-card-O.patt">
-        <a-entity gltf-model="/assets/oxygen_molecule/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
-    </a-marker>
+<a-assets>>
+ <a-asset-item id="oxygen" src="./assets/oxygen_molecule/scene.gltf"></a-asset-item>
+</a-assets>
 
-    <a-marker type="pattern" preset="custom" url="/assets/pattern-card-water.patt">
-        <a-entity gltf-model="/assets/h2o_molecule/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
-    </a-marker>
+<a-assets>
+ <a-asset-item id="h20" src="./assets/h2o_molecule/scene.gltf"></a-asset-item>
+</a-assets>
+
+<a-marker id="marker1" type="pattern" url="./assets/pattern-card-H.patt">
+ <a-image src="assets/card-H.png" rotation="0 180 0" width: 1.5; height: 1.5></a-image>
+ <a-entity position="0 1 0"  scale="0.5 0.5 0.5" rotation="0 180 0" gltf-model="#hydrogen"
+     animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 360 0 360; loop: true;">
+ </a-entity>
+</a-marker>
+
+<a-marker id="marker1" type="pattern" url="./assets/pattern-card-0.patt">
+ <a-image src="assets/card-0.png" rotation="0 180 0" width: 1.5; height: 1.5></a-image>
+ <a-entity position="0 1 0"  scale="0.5 0.5 0.5" rotation="0 180 0" gltf-model="#oxygen"
+     animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 360 0 360; loop: true;">
+ </a-entity>
+</a-marker>
 
         <a-entity camera></a-entity>
     </a-scene>
