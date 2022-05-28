@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  
+<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>-->
     <script src="build/aframe-ar.js"></script>
@@ -13,76 +14,42 @@
 
     <!-- speech command component -->
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script> -->
-    <script src="build/aframe-speech-command-component.js"></script> 
-    
-   <!--
+    <script src="build/aframe-speech-command-component.js"></script>
+
+ 
+
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+  <!--Deliverable 1-->
+ <!--
           <a-snow
         snow="count:8000; dropRadius: 1.5; height:45; color: white;"
         particle-system="preset: snow"
         scale"111;"
    </a-snow>  -->
 
-<a-entity id="menu"
-speech-command__show="command:play snow; type: attribute; attribute: visible; value: true;"
-speech-command__show="command:stop snow; type: attribute; attribute: visible; value: false;">
-<body style="margin : 0px; overflow: hidden;">
-    <a-scene vr-mode-ui="enabled: false;"
-     renderer="logarithmicDepthBuffer: true;" 
-     embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
->
+  <a-marker preset="hiro">
+
+
+
+  <a-entity id="menu"
+  speech-command__start="command: start; type: attribute; attribute: visible; targetElement: #snow; value: true;"
+  speech-command__stop="command: stop; type: attribute; attribute: visible;  targetElement: #snow; value: false ;">
 </a-entity>
-        <a-marker preset="hiro">
+
          <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2; " position="0 0 0" material="color:red;"></a-entity>
         <a-entity id="sphere" geometry="primitive: sphere; radius: 0.2; " position="0.5 0 0" material="color: green;"></a-entity>
         <a-entity id="cylinder" geometry="primitive: cylinder; radius: 0.2;  height: 0.2; " position="-0.5 0 0" material="color: blue;"></a-entity>
        <a-entity position="0 2 -10" particle-system="preset:snow; particleCount:5000">  </a-entity>
     </a-marker>
-    
-    <a-marker preset="DPSD19109" type="pattern" preset="custom" url="./assets/pattern-DPSD.patt">
-        <a-assets>
-            <img id="stella" src="./assets/stella.png">
-        </a-assets>
-        <a-image width="1.5" height="1.5" src="#stella" position="0 0 0" rotation="0 0 0"></a-image>
-        <a-text color="#660066" value="StellaPiperaki" width="5" rotation="0 0 0" class="bolded" position=" -1 0 -1"></a-text>
-    </a-marker>
-
-</a-marker>
 
 
-<a-assets>
-    <a-asset-item id="hydrogen" src="./assets/hydrogen_molecule/scene.gltf"></a-asset-item>
-   </a-assets>
-   
-   <a-assets>>
-    <a-asset-item id="oxygen" src="./assets/oxygen_molecule/scene.gltf"></a-asset-item>
-   </a-assets>
-   
-   <a-assets>
-    <a-asset-item id="h20" src="./assets/h2o_molecule/scene.gltf"></a-asset-item>
-   </a-assets>
-   
-   <a-marker id="marker1" type="pattern" url="./assets/pattern-card-H.patt">
-    <a-image src="assets/card-H.png" rotation="0 180 0" width: 1.5; height: 1.5></a-image>
-    <a-entity position="0 1 0"  scale="0.5 0.5 0.5" rotation="0 180 0" gltf-model="#hydrogen"
-        animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 360 0 360; loop: true;">
-    </a-entity>
-   </a-marker>
-   
-   <a-marker id="marker1" type="pattern" url="./assets/pattern-card-0.patt">
-    <a-image src="assets/card-0.png" rotation="0 180 0" width: 1.5; height: 1.5></a-image>
-    <a-entity position="0 1 0"  scale="0.5 0.5 0.5" rotation="0 180 0" gltf-model="#oxygen"
-        animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 360 0 360; loop: true;">
-    </a-entity>
-   </a-marker>
-   
-    <a-entity position="0 0 0" rotation="0 180 0"
-    gltf-model="#h20"
-    animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 360 0 0; loop: true;" 
-    visible="false" >
-    </a-entity>
-
-        <a-entity camera></a-entity>
-    </a-scene>
+     <a-entity camera></a-entity>
+        </a-scene>
     </body>
 </html>
