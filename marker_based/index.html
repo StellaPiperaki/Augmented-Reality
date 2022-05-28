@@ -15,14 +15,13 @@
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script> -->
     <script src="build/aframe-speech-command-component.js"></script> 
     
-
-   
    <!--
           <a-snow
         snow="count:8000; dropRadius: 1.5; height:45; color: white;"
         particle-system="preset: snow"
         scale"111;"
    </a-snow>  -->
+
 <a-entity id="menu"
 speech-command__show="command:play snow; type: attribute; attribute: visible; value: true;"
 speech-command__show="command:stop snow; type: attribute; attribute: visible; value: false;">
@@ -42,9 +41,9 @@ arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     </a-marker>
     <a-marker type="pattern" preset="custom" url="/assets/pattern-dpsdNEW.patt">
         <a-assets>
-            <img id="santorini" src="/assets/santorini.png">
+            <img id="stella" src="./assets/stella.png">
         </a-assets>
-        <a-image width="1.5" height="1.5" src="#santorini" position="0 0 0" rotation="0 0 0"></a-image>
+        <a-image width="1.5" height="1.5" src="#stella" position="0 0 0" rotation="0 0 0"></a-image>
         <a-text color="#660066" value="StellaPiperaki" width="5" rotation="0 0 0" class="bolded" position=" -1 0 -1"></a-text>
     </a-marker>
 
@@ -59,6 +58,7 @@ arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     <a-marker type="pattern" preset="custom" url="/assets/pattern-card-water.patt">
         <a-entity gltf-model="/assets/h2o_molecule/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer/>
     </a-marker>
+
         <a-entity camera></a-entity>
     </a-scene>
     </body>
