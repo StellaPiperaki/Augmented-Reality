@@ -7,7 +7,6 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>-->
     <script src='build/aframe-ar-nft.js'></script>
-
 </head>
 
 
@@ -17,36 +16,28 @@
 		embedded
 		arjs='sourceType: webcam; debugUIEnabled: false;'>
 
-        <a-entity id="cameraRig">
-            <a-entity id="head" camera wasd-controls look-controls cursor="rayOrigin: mouse" position="0 1 0"></a-entity>
-        </a-entity>
+        <a-box
+            material="color: pink;"
+            scale="20 20 20"
+            gps-entity-place="latitude: 2.294694; longitude: 48.858093;">
+        </a-box>
+
+        <a-entity text="value: This is The Gate Of Sun!;" id="text1" visible="false"></a-entity>
+
 
         <a-assets>
             <a-asset-item id="SunGate" src="./assets/SunGate.gltf"></a-asset-item>
         </a-assets>
 
+        <a-entity event-set__click="_target: #text1; visible: true" gltf-model="#SunGate" rotation="0 180 0" scale="0.15 0.15 0.15" 
+        gps-entity-place="longitude:-16.554369574312506; latitude: -68.6739404485454;" animation-mixer />
 
-         <a-entity position="0 0 -120">
-t
-        <a-entity gltf-model="#SunGate" scale="3 3 3" class="click" 
 
-               animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
-
-                gps-entity-place="latitude: -16.554369574312506; longitude: -68.6739404485454;" text-show>
-                
-                <a-entity class="clickable"
-                          position="-1 6.5 1"
-
-                          text="color: #660066; font-size:12; font-type: bold; align: center; value: This is The Gate of Sun!;
-
-                           width: 20; height: 20;  letterSpacing: 5;" visible="false">
-                        </a-entity>
-            </a-entity>
-        </a-entity>
-    
         <a-camera
             rotation-reader
-            gps-camera="simulateLatitude: 31.239752; simulateLongitude: 121.499588; minDistance: 1; maxDistance: 700;" >
+            gps-camera="simulateLatitude: 37.44178480587456; simulateLongitude: 24.93844869131674; minDistance: 1; maxDistance: 700;"
+        >
 		</a-camera>
 	</a-scene>
-</body>
+</body> 
+
