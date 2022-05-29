@@ -23,7 +23,10 @@
         </a-box>
 
         <a-entity text="value: This is The Gate Of Sun!;" id="text1" visible="false"></a-entity>
-
+       
+        <a-entity id="cameraRig">
+            <a-entity id="head" camera wasd-controls look-controls cursor="rayOrigin: mouse" position="0 1.6 0"></a-entity>
+        </a-entity>
 
         <a-assets>
             <a-asset-item id="SunGate" src="./assets/SunGate.gltf"></a-asset-item>
