@@ -19,12 +19,22 @@
         <a-box
             material="color: red;"
             scale="20 20 20"
-            gps-entity-place="latitude: 44.506477; longitude: 11.301524;">
+            gps-entity-place="latitude: 2.294694; longitude: 48.858093;">
         </a-box>
+
+        <a-entity text="value: This is the Eiffel Tower!;" id="text1" visible="false"></a-entity>
+
+
+        <a-assets>
+            <a-asset-item id="Eiffel_Tower" src="./assets/eiffel_tower/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity event-set__click="_target: #text1; visible: true" gltf-model="#Eiffel_Tower" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 2.294694; latitude: 48.858093;" animation-mixer />
+
 
         <a-camera
             rotation-reader
-            gps-camera="simulateLatitude: 44.504348; simulateLongitude: 11.301027; minDistance: 1; maxDistance: 700;"
+            gps-camera="simulateLatitude: 2.294694; simulateLongitude: 48.858093; minDistance: 1; maxDistance: 700;"
         >
 		</a-camera>
 	</a-scene>
