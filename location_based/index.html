@@ -22,21 +22,22 @@
             gps-entity-place="latitude: 2.294694; longitude: 48.858093;">
         </a-box>
 
-        <a-entity text="value: This is the Eiffel Tower!;" id="text1" visible="false"></a-entity>
+        <a-entity text="value: This is The Gate Of Sun!;" id="text1" visible="false"></a-entity>
 
 
         <a-assets>
-            <a-asset-item id="Eiffel_Tower" src="./assets/eiffel_tower/scene.gltf"></a-asset-item>
+            <a-asset-item id="SunGate" src="./assets/SunGate.gltf"></a-asset-item>
         </a-assets>
 
-        <a-entity event-set__click="_target: #text1; visible: true" gltf-model="#Eiffel_Tower" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 2.294694; latitude: 48.858093;" animation-mixer />
+        <a-entity event-set__click="_target: #text1; visible: true" gltf-model="#SunGate" rotation="0 180 0" scale="0.15 0.15 0.15" 
+        gps-entity-place="longitude:-16.554369574312506; latitude: -68.6739404485454;" animation-mixer />
 
 
         <a-camera
             rotation-reader
-            gps-camera="simulateLatitude: 2.294694; simulateLongitude: 48.858093; minDistance: 1; maxDistance: 700;"
+            gps-camera="simulateLatitude: 37.44178480587456; simulateLongitude: 24.93844869131674; minDistance: 1; maxDistance: 700;"
         >
 		</a-camera>
 	</a-scene>
-</body>
+</body> 
 
