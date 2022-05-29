@@ -9,22 +9,6 @@
     <script src='build/aframe-ar-nft.js'></script>
 </head>
 
-<script>
-
-    AFRAME.registerComponent("text-show", {
-        init: function () {
-            let toggle = false
-            this.el.addEventListener("click", (e) => {
-                let entity = document.querySelectorAll(".clickable")
-                entity.forEach(function (el) {
-                    el.setAttribute("visible", toggle)
-                })
-                toggle = !toggle
-            })
-        }
-    })
-</script>
-
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
         vr-mode-ui="enabled: false"
