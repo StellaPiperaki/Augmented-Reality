@@ -35,15 +35,10 @@
             <a-asset-item id="SunGate" src="./assets/SunGate.gltf"></a-asset-item>
         </a-assets>
 
-        <a-entity event-set__click="_target: #text1; visible: true" gltf-model="#SunGate" rotation="0 180 0" scale="0.15 0.15 0.15" 
+        <a-entity event-set__click="_target: #text1; visible: true" gltf-model="#SunGate" rotation="0 180 0" scale="20 20 20" 
         gps-entity-place="longitude:-16.554369; latitude: -68.673940;" animation-mixer />
 
-        <a-box
-        material="color: red;"
-        scale="20 20 20"
-        gps-entity-place="latitude: 37.441782; longitude: 24.938424;">
-    </a-box>
-
+    
         <a-camera
             rotation-reader
             gps-camera="simulateLatitude: -16.552546; simulateLongitude: -68.673700; minDistance: 1; maxDistance: 700;"
