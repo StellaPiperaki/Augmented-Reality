@@ -15,36 +15,41 @@
 		embedded
 		arjs='sourceType: webcam; debugUIEnabled: false;'>
 
-    
-
-        <a-entity text="value: This is The Gate Of Sun!
-        Also known as the Gateway of the Sun,
-        is a monolith carved in the form of an arch or gateway at the site of Tiahuanaco by the Tiwanaku culture,
-        an Andean civilization of Bolivia that thrived around Lake Titicaca
-        in the Andes of western South America around 500-950 CE. ;" id="text1" visible="false"></a-entity>
        
-        <a-entity id="cursor">
-            <a-entity id="head" camera wasd-controls look-controls cursor="rayOrigin: mouse" position="0 1.6 0"></a-entity>
-        </a-entity>
-
         <a-assets>
             <a-asset-item id="SunGate" src="./assets/SunGate.gltf"></a-asset-item>
         </a-assets>
-
-        <a-entity event-set__click="_target: #text1; visible: true" gltf-model="#SunGate" rotation="0 180 0" scale="20 20 20" 
-        gps-entity-place="longitude:-16.554369; latitude: -68.673940;" animation-mixer />
-
-    
+        
+        <a-entity 
+            gltf-model="SunGate" class="click" scale = "2 2 2" 
+            gps-entity-place = "latitude: -16.554369; longitude:-68.673940;" 
+            animation="property: rotation; dur: 8000; to: 0 360 0; loop: true;"    
+            text-show>
+        
+            <a-entity
+                class="clickable"
+                position="-0.05 -1 1"
+                scale="4 4 4"
+                visible="false"
+                text="font-size:400; color: pink; align:center; value: This is The Gate Of Sun!
+                Also known as the Gateway of the Sun,
+                is a monolith carved in the form of an arch or gateway at the site of Tiahuanaco by the Tiwanaku culture,
+                an Andean civilization of Bolivia that thrived around Lake Titicaca
+                in the Andes of western South America around 500-950 CE.">        
+            </a-entity>
+        
+        </a-entity> 
+        
         <a-camera
             rotation-reader
-            gps-camera="simulateLatitude: -16.552546; simulateLongitude: -68.673700; minDistance: 1; maxDistance: 700;"
-        >
-	</a-camera>
-
-    <a-entity id="cursor">
-        <a-entity cursor="rayOrigin: mouse"></a-entity>
-    </a-entity>
+            gps-camera="simulateLatitude: -16.554369; simulateLongitude: -68.673940; minDistance:1; maxDistance: 700;">
+        </a-camera> 
+        
+        <a-entity id="cursor">
+            <a-entity cursor="rayOrigin: mouse"></a-entity>
+        </a-entity>
 
 	</a-scene>
 </body> 
+
 
