@@ -22,16 +22,18 @@
 </a-assets>
 
     
-        <a-entity event-set__click="_target: #text1; visible: true"
-        gltf-model="#ramen" 
-        rotation="0 180 0" scale="0.15 0.15 0.15" 
-        gps-entity-place="longitude: -68.673940; latitude: -16.554369;" animation-mixer />
+        <a-entity  
+         gltf-model="#ramen" class="click"  position="0 0 0" scale = "0.05 0.05 0.05"  
+        gps-entity-place = "latitude: -16.554369; longitude: -68.673940;" 
+        animation="property: rotation; dur: 8000; to: 0 360 0; loop: true;"    
+        text-show />
 
         <a-entity text="value: This is The Gate Of Sun!
         Also known as the Gateway of the Sun,
         is a monolith carved in the form of an arch or gateway at the site of Tiahuanaco by the Tiwanaku culture,
         an Andean civilization of Bolivia that thrived around Lake Titicaca
-        in the Andes of western South America around 500-950 CE.;" id="text1" visible="false"></a-entity>
+        in the Andes of western South America around 500-950 CE.;" 
+        id="text1" visible="false"></a-entity>
 
         <a-camera
             rotation-reader
